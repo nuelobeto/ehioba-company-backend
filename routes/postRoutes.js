@@ -11,7 +11,7 @@ const {
 } = require("../controllers/postControllers");
 
 router.post("/addPost", requiresAuth, upload.single("image"), addPost);
-router.get("/getPosts", requiresAuth, getPosts);
+router.get("/getPosts", getPosts);
 router.put("/updatePost/:id", requiresAuth, upload.single("image"), updatePost);
 router.delete("/deletePost/:id", requiresAuth, deletePost);
 
